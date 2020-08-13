@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Mulish:wght@400;800&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #4f4f4f;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+div {
+  /* border: 1px solid red; */
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.btn-link {
+  border-radius: 12px;
+  background-color: rgba(235, 87, 87, 0.9);
+  color: #fff;
+  width: 120px;
+  height: 50px;
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #fff;
+  min-height: 64px;
+  padding: 10px;
+  align-items: center;
+}
+nav .logo {
+  flex-grow: 1;
+  margin: 0 0 10px;
+}
+
+.search-gp {
+  height: 55px;
+  display: flex;
+  border-radius: 16px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+}
+.search-gp div {
+  font-family: "Mulish", sans-serif;
+  border-right: 1px solid #f2f2f2;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.search-gp .search {
+  flex: 1;
+  border: none;
+  font-size: 18px;
+  color: rgba(235, 87, 87, 0.9);
+}
+
+main {
+  padding: 10px;
+}
+main.fixed {
+  position: fixed;
+  overflow: hidden;
+}
+
+.pagetitle {
+  display: flex;
+  align-items: center;
+}
+.pagetitle h1 {
+  flex-grow: 1;
+}
+.pagetitle span {
+  font-size: 14px;
+  color: #4f4f4f;
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bnbCard {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.bnbCard .photo {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+.bnbCard .infoBar {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 5px;
+}
+.bnbCard .title {
+  padding-bottom: 10px;
+}
+.bnbCard .infoBar .type {
+  flex-grow: 1;
+  color: #828282;
+}
+.bnbCard .super {
+  border: 1px solid #4f4f4f;
+  border-radius: 20px;
+  font-size: 10px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.bnbCard .star {
+  font-size: 16px;
+  color: rgba(235, 87, 87, 0.72);
+}
+.bnbCard .rating .point {
+  font-weight: 500;
+}
+.bnbCard .title {
+  font-weight: 500;
+}
+
+.selectedCity {
+  font-size: 14px;
+}
+.searchOverlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+.searchOverlay .header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.searchOverlay .header button {
+  font-size: 16px;
+}
+.searchOverlay .header span {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.searchOverlay .searchbar-gp {
+  border-radius: 16px;
+  margin: 10px;
+}
+.searchOverlay .searchbar-gp .citybar {
+  border-radius: 0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.searchOverlay .searchbar-gp .guestbar {
+  border-radius: 0;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.searchOverlay .searchbar {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.searchOverlay .searchbar .label {
+  font-weight: 800;
+}
+.searchOverlay .selection {
+  padding: 10px;
+}
+.searchOverlay .selection li {
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+}
+.searchOverlay .overlayContainer {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
+}
+.searchOverlay .icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.searchOverlay .bg {
+  background-color: #000;
+  opacity: 0.5;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+}
+.searchOverlay .btnBottom {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.searchOverlay .btnTop {
+  display: none;
+}
+.searchOverlay .guestrow {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.guestrow .title {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.guestrow .type {
+  font-weight: bold;
+}
+.guestrow .label {
+  color: #828282;
+}
+.guestrow .counter {
+  margin: 10px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.guestrow .counter .countNumber {
+  margin: 0 10px;
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}
+.guestrow .counter button {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*desktop responsive*/
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  nav .logo {
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    padding: 20px 30px;
+  }
+
+  .search-gp {
+    width: unset;
+    min-width: 280px;
+  }
+  .search-gp div {
+    flex: auto;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 20px;
+    /* display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; */
+  }
+
+  .bnbCard {
+    margin: 0;
+  }
+  .bnbCard .infoBar {
+    padding: 20px 0 10px;
+  }
+  .bnbCard .title {
+    padding: 0px 0 10px;
+  }
+
+  .bnbCard .photo {
+    height: 270px;
+  }
+
+  .searchOverlay .overlayContainer {
+    min-height: 400px;
+  }
+
+  .searchOverlay .header {
+    display: none;
+  }
+  .searchOverlay .searchbar-gp {
+    margin: 50px 50px 0 50px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: none;
+  }
+  .searchOverlay .searchbar-gp .searchbar {
+    cursor: pointer;
+  }
+  .searchOverlay .searchbar-gp .citybar {
+    border-radius: 0;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  .searchOverlay .searchbar-gp .guestbar {
+    border-radius: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  .searchOverlay .searchbar-gp .btnTop {
+    border-radius: 0;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .searchOverlay .searchbar-gp .searchbar.active {
+    border: 1px solid #000;
+    border-radius: 16px;
+  }
+
+  .searchOverlay .searchbar-gp div {
+    flex: 1;
+  }
+  .searchOverlay .btnBottom {
+    display: none;
+  }
+  .searchOverlay .btnTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .searchOverlay div {
+    flex: 1;
+  }
+
+  .searchOverlay .selection-gp {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 50px 50px 50px;
+  }
+  .searchOverlay .selection {
+    padding: 10px 0;
+  }
+  .searchOverlay .guestrow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
